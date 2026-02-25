@@ -1,0 +1,252 @@
+.historical-container {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.historical-empty {
+  padding: 60px 40px;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.historical-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.historical-title h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.historical-location {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.historical-filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.historical-filter label {
+  font-size: 14px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.date-select {
+  min-width: 200px;
+  padding: 12px 16px !important;
+}
+
+.historical-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.historical-day {
+  padding: 28px;
+}
+
+.historical-day-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--glass-border);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.historical-day-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.day-summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.summary-icon {
+  font-size: 36px;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.2));
+}
+
+.summary-temp {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--text-primary);
+}
+
+.historical-overview {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.overview-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.hourly-data {
+  margin-bottom: 28px;
+}
+
+.hourly-data h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  color: var(--text-primary);
+}
+
+.hourly-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 12px;
+}
+
+.hour-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  gap: 6px;
+}
+
+.hour-time {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-family: 'SF Mono', monospace;
+}
+
+.hour-icon {
+  font-size: 20px;
+}
+
+.hour-temp {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.astro-data h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  color: var(--text-primary);
+}
+
+.astro-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.astro-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+
+.astro-item svg {
+  width: 24px;
+  height: 24px;
+  color: var(--accent-warm);
+  flex-shrink: 0;
+}
+
+.astro-item div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.astro-label {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.astro-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+@media (max-width: 1024px) {
+  .historical-overview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .astro-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .historical-header {
+    flex-direction: column;
+  }
+  
+  .historical-filter {
+    width: 100%;
+  }
+  
+  .date-select {
+    flex: 1;
+    min-width: unset;
+  }
+  
+  .historical-overview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .astro-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hourly-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
